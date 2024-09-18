@@ -1,0 +1,248 @@
+:root {
+    --primary-color: #1db954;
+    --secondary-color: #191414;
+    --text-color: #ffffff;
+    --background-color: #121212;
+    --hover-color: #282828;
+}
+
+/* Dark mode variables */
+.dark-mode {
+    --primary-color: #1ed760;
+    --secondary-color: #b3b3b3;
+    --text-color: #ffffff;
+    --background-color: #121212;
+    --hover-color: #282828;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    color: var(--primary-color);
+}
+
+.player-container {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.album-art {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.album-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.album-art:hover img {
+    transform: scale(1.05);
+}
+
+.track-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.track-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.track-info p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.progress-container {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: var(--hover-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.1s linear;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.controls button:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+#play-pause-button {
+    font-size: 2rem;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-container i {
+    margin-right: 10px;
+}
+
+#volume-slider {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 5px;
+    background: var(--hover-color);
+    outline: none;
+    border-radius: 5px;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--primary-color);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.playlist-container {
+    margin-top: 30px;
+}
+
+.playlist-container h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+#playlist {
+    list-style-type: none;
+}
+
+#playlist li {
+    padding: 10px;
+    background-color: var(--secondary-color);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#playlist li:hover {
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+    .album-art {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .controls button {
+        font-size: 1.2rem;
+    }
+    
+    #play-pause-button {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .album-art {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .track-info h2 {
+        font-size: 1.2rem;
+    }
+    
+    .track-info p {
+        font-size: 0.9rem;
+    }
+    
+    .controls button {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+    
+    #play-pause-button {
+        font-size: 1.3rem;
+    }
+}

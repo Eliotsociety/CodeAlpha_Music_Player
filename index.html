@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>Music Player ♫</h1>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </header>
+
+      <main>
+        <div class="player-container">
+          <div class="album-art">
+            <img
+              src="https://i.ibb.co/Qk294L2/Headphone-Silhouette-PNG-Images-Headphone-Silhouette-Icon-Design-Template-Template-Icons-Silhouette.jpg"
+              alt="Album artwork"
+              id="album-art"
+            />
+          </div>
+
+          <div class="track-info">
+            <h2 id="track-title">Track Title</h2>
+            <p id="track-artist">Artist Name</p>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-info">
+              <span id="current-time">0:00</span>
+              <span id="total-time">0:00</span>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="prev-button" aria-label="Previous track">
+              <i class="fas fa-step-backward"></i>
+            </button>
+            <button id="play-pause-button" aria-label="Play or pause track">
+              <i class="fas fa-play"></i>
+            </button>
+            <button id="next-button" aria-label="Next track">
+              <i class="fas fa-step-forward"></i>
+            </button>
+          </div>
+
+          <div class="volume-container">
+            <i class="fas fa-volume-up"></i>
+            <input
+              type="range"
+              id="volume-slider"
+              min="0"
+              max="100"
+              value="100"
+            />
+          </div>
+        </div>
+
+        <div class="playlist-container">
+          <h3>Playlist</h3>
+          <ul id="playlist">
+            <!-- Playlist items will be dynamically added here -->
+          </ul>
+        </div>
+      </main>
+    </div>
+
+    <!-- Your script file -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- made by zulqurnain hyder -->
